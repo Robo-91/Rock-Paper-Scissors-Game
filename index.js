@@ -9,9 +9,25 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const choices = ['rock', 'paper', 'scissors'];
 
+function computerPlay(){
+	let randomChoice = Math.floor(Math.random() * choices.length);
+	return choices[randomChoice];
+}
+
+const fadeInAnimation = () => {
+	popUp.classList.add('messagefadein');
+	popUp.style.zIndex = 1;
+}
+
+const fadeOutAnimation = () => {
+	popUp.classList.add('messagefadeout');
+}
+
 function gameLogic(){
 
 	rock.addEventListener("click", function(){
+		popUp.classList.remove('messagefadeout');
+		popUp.style.display = 'none';
 		for(let i = 0; i <= choices.length; i++){
 			if(computerPlay() === choices[0]){
 				gameMessage.innerHTML = "Draw!";
@@ -27,6 +43,7 @@ function gameLogic(){
 			}
 		}
 		if (playerScore === 5 || comScore === 5) {
+			fadeInAnimation();
 			rock.style.display = "none";
 			paper.style.display = "none";
 			scissors.style.display = "none";
@@ -37,6 +54,8 @@ function gameLogic(){
 	});
 
 	paper.addEventListener("click", function(){
+		popUp.classList.remove('messagefadeout');
+		popUp.style.display = 'none';
 		for(let i = 0; i <= choices.length; i++){
 			if(computerPlay() === choices[0]){
 				gameMessage.innerHTML = 'You win! Paper beats Rock!';
@@ -52,6 +71,7 @@ function gameLogic(){
 			}
 		}
 		if (playerScore === 5 || comScore === 5) {
+			fadeInAnimation();
 			rock.style.display = "none";
 			paper.style.display = "none";
 			scissors.style.display = "none";
@@ -62,6 +82,8 @@ function gameLogic(){
 	});
 
 	scissors.addEventListener("click", function(){
+		popUp.classList.remove('messagefadeout');
+		popUp.style.display = 'none';
 		for(let i = 0; i <= choices.length; i++){
 			if(computerPlay() === choices[0]){
 				gameMessage.innerHTML = 'You lose! Rock beats Scissors!';
@@ -77,6 +99,7 @@ function gameLogic(){
 			}
 		}
 		if (playerScore === 5 || comScore === 5) {
+			fadeInAnimation();
 			rock.style.display = "none";
 			paper.style.display = "none";
 			scissors.style.display = "none";
@@ -87,23 +110,18 @@ function gameLogic(){
 	});
 
 	newGame.addEventListener("click", function(){
+		popUp.classList.remove('messagefadein');
+		popUp.classList.add('messagefadeout');
 		rock.style.display = "inline";
 		paper.style.display = "inline";
 		scissors.style.display = "inline";
-		popUp.style.display = "none";
+		popUp.style.zIndex = "0";
 		gameMessage.innerHTML = "- Choose between Rock, Paper, or Scissors -";
 		gameMessage.style.display = "block";
 		playerScore = 0;
 		comScore = 0;
 	});
 
-}
-
-
-
-function computerPlay(){
-	let randomChoice = Math.floor(Math.random() * choices.length);
-	return choices[randomChoice];
 }
 
 gameLogic();
