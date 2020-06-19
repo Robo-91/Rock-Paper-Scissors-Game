@@ -67,12 +67,49 @@ i{
 	z-index: 1;
 	background-color: black;
 	margin: auto;
-	position: relative;
-	bottom: 550px;
-	right: 10px;
+	position: absolute;
+	bottom: 20%;
+	right: 30%;
+	left: 30%;
 	border-radius: 10px;
 	display: none;
 	font-family: 'Nunito', sans-serif;
+}
+
+.messagefadein {
+	animation-name: fadein;
+	animation-duration: .4s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in;
+}
+
+@keyframes fadein {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		width: 25%;
+		height: 250px;
+	}
+}
+
+.messagefadeout {
+	animation-name: fadeout;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-out;
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+		width: 25%;
+		height: 250px;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 #newgame {
