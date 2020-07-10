@@ -9,11 +9,13 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const choices = ['rock', 'paper', 'scissors'];
 
+// Function that makes the computer to make a random choice
 function computerPlay(){
 	let randomChoice = Math.floor(Math.random() * choices.length);
 	return choices[randomChoice];
 }
 
+// Functions that adds an animation to the game over pop-up message
 const fadeInAnimation = () => {
 	popUp.classList.add('messagefadein');
 	popUp.style.zIndex = 1;
@@ -25,6 +27,7 @@ const fadeOutAnimation = () => {
 
 function gameLogic(){
 
+	// for for choosing rock (compares rock to computer's random choice)
 	rock.addEventListener("click", function(){
 		popUp.classList.remove('messagefadeout');
 		popUp.style.display = 'none';
@@ -53,6 +56,7 @@ function gameLogic(){
 		}
 	});
 
+	// logic for choosing paper
 	paper.addEventListener("click", function(){
 		popUp.classList.remove('messagefadeout');
 		popUp.style.display = 'none';
@@ -81,6 +85,7 @@ function gameLogic(){
 		}
 	});
 
+	// logic for choosing scissors
 	scissors.addEventListener("click", function(){
 		popUp.classList.remove('messagefadeout');
 		popUp.style.display = 'none';
@@ -109,6 +114,7 @@ function gameLogic(){
 		}
 	});
 
+	// Creates a new game with both player scores at 0
 	newGame.addEventListener("click", function(){
 		popUp.classList.remove('messagefadein');
 		popUp.classList.add('messagefadeout');
