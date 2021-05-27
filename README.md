@@ -1,11 +1,3 @@
-To view a Demo of this page:
-https://robo-91.github.io/Rock-Paper-Scissors-Game/
-
-This project is part of the Odin Project Curriculum, and was built with HTML, CSS, and javascript.
-
-The purpose of implementing this page was to learn how to use certain features of DOM manipulation, including
-how to select elements from my HTML page and manipulating them with addEventListener.
-
 # Rock Paper Scissors Game
 
 ## Project Description
@@ -13,7 +5,7 @@ how to select elements from my HTML page and manipulating them with addEventList
 This project is part of the Odin Project Curriculum, and was built with HTML, CSS, and javascript.
 
 The purpose of implementing this page was to learn how to use certain features of DOM manipulation, including
-how to select elements from my HTML page and manipulating them with addEventListener.
+how to select elements from an HTML page and manipulate them with addEventListener.
 
 ## Technologies Used
 
@@ -29,7 +21,7 @@ List of features ready and TODOs for future development
 * Each game keeps score of to determine the winner.
 
 To-do list:
-* Refactor Code to follow DRY concept and eliminate redundancy
+* Refactor Code to follow DRY concept and eliminate redundancy.
 
 ## Getting Started
    
@@ -49,4 +41,5 @@ To view a Demo of the application:
 
 ## License
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [GNU](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
