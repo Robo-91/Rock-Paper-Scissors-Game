@@ -24,15 +24,12 @@ To-do list:
 * Refactor Code to follow DRY concept and eliminate redundancy.
 
 ## Getting Started
-   
-(include git clone command)
-(include all environment setup steps)
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+Ensure that you have a Text Editor installed (Visual Studio Code or Sublime Text Editor will work fine).
 
-- All the `code` required to get started
-- Images of what it should look like
+In the terminal, execute the following command:
+> git clone https://github.com/Robo-91/Rock-Paper-Scissors-Game.git
+(If you are using Windows, ensure that you have Git Bash installed)
 
 ## Usage
 
