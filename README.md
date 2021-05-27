@@ -22,6 +22,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 * Refactor Code to follow DRY concept and eliminate redundancy.
+* Make the application responsive.
 
 ## Getting Started
 
